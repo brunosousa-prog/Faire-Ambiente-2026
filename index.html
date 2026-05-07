@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Faire · Ambiente 2026</title>
+  <title>Tradeshow Hub · Faire EU Brand Partnerships</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
   <style>
@@ -3054,7 +3054,7 @@ function AccountCard({
       border: "1px solid " + C.border,
       marginBottom: 14
     }
-  }, [["Contact", contact ? (contact.n + (contact.t ? " \u00B7 " + contact.t : "")) : null], ["Status", a.status], ["Country", a.country], ["Category", a.cat], ["BoB", a.bob], ["Pred. GMV", gmvLabel(a.gmv)], ["Last Contact", s.lc ? lc.text : null], ["Website", s.w], ["eCommerce", s.sys], ["Integration", s.int], ["Lost Reason", a.lost], ["Lost Type", s.lt], ["Lost Detail", s.ld]].filter(([, v]) => v).map(([k, v]) => /*#__PURE__*/React.createElement("div", {
+  }, [["Status", a.status], ["Country", a.country], ["Category", a.cat], ["BoB", a.bob], ["Pred. GMV", gmvLabel(a.gmv)], ["Last Contact", s.lc ? lc.text : null], ["Website", s.w], ["eCommerce", s.sys], ["Integration", s.int], ["Lost Reason", a.lost], ["Lost Type", s.lt], ["Lost Detail", s.ld]].filter(([, v]) => v).map(([k, v]) => /*#__PURE__*/React.createElement("div", {
     key: k,
     style: {
       display: "flex",
@@ -3080,7 +3080,25 @@ function AccountCard({
       color: k === "Last Contact" ? lc.color : C.text2,
       wordBreak: "break-word"
     }
-  }, v)))), /*#__PURE__*/React.createElement("div", {
+  }, v)))), contact && /*#__PURE__*/React.createElement("div", {
+    style: { marginBottom: 14, padding: "12px 14px", background: C.muted, borderRadius: 8, border: "1px solid " + C.border }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: { fontFamily: F, fontSize: 10, fontWeight: 700, color: C.text3, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 8 }
+  }, "👤 Primary Contact"),
+  /*#__PURE__*/React.createElement("div", {
+    style: { fontFamily: F, fontSize: 14, fontWeight: 700, color: C.text, marginBottom: 2 }
+  }, contact.n),
+  contact.t ? /*#__PURE__*/React.createElement("div", {
+    style: { fontFamily: F, fontSize: 12, color: C.text3, marginBottom: 8 }
+  }, contact.t) : null,
+  /*#__PURE__*/React.createElement("a", {
+    href: "https://app.salesloft.com/app/people?search=" + encodeURIComponent(contact.n),
+    target: "_blank", rel: "noreferrer",
+    onClick: e => e.stopPropagation(),
+    style: { fontFamily: F, fontSize: 11, color: C.blue, textDecoration: "none" }
+  }, "📧 Email in Salesforce ↗")
+),
+  /*#__PURE__*/React.createElement("div", {
     style: {
       marginBottom: 14
     }
@@ -3488,6 +3506,7 @@ const AE_LIST = [{
   id: "0053q00000B4kIYAAZ"
 }];
 function App() {
+  const [tab, setTab] = useState("ambiente");
   const [ae, setAe] = useState("ALL");
   const [search, setSearch] = useState("");
   const [status, setStatus] = useState("ALL");
@@ -3518,7 +3537,42 @@ function App() {
       color: C.text,
       fontFamily: F
     }
-  }, /*#__PURE__*/React.createElement("div", {
+  },
+  /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      gap: 0,
+      borderBottom: "2px solid " + C.border,
+      background: C.card,
+      paddingLeft: 24,
+      paddingTop: 10
+    }
+  }, ["ambiente","spring-fair","autumn-fair","maison","trendset","toy-fair","top-drawer"].map(t => {
+    const labels = {"ambiente":"Ambiente","spring-fair":"Spring Fair","autumn-fair":"Autumn Fair","maison":"Maison & Objet","trendset":"TrendSet","toy-fair":"Toy Fair","top-drawer":"Top Drawer"};
+    return /*#__PURE__*/React.createElement("button", {
+      key: t,
+      onClick: () => setTab(t),
+      style: {
+        fontFamily: F,
+        fontSize: 13,
+        fontWeight: tab === t ? 700 : 400,
+        color: tab === t ? C.green : C.text3,
+        background: "transparent",
+        border: "none",
+        borderBottom: tab === t ? "2px solid " + C.green : "2px solid transparent",
+        padding: "8px 16px 10px",
+        cursor: "pointer",
+        marginBottom: -2
+      }
+    }, labels[t]);
+  })),
+  tab !== "ambiente" ? /*#__PURE__*/React.createElement("div", {
+    style: { textAlign: "center", padding: "80px 24px", fontFamily: F, color: C.text3 }
+  }, /*#__PURE__*/React.createElement("div", { style: { fontSize: 48, marginBottom: 16 } }, "🚧"),
+    /*#__PURE__*/React.createElement("div", { style: { fontSize: 18, fontWeight: 600, color: C.text, marginBottom: 8 } }, {"spring-fair":"Spring Fair","autumn-fair":"Autumn Fair","maison":"Maison & Objet","trendset":"TrendSet","toy-fair":"Toy Fair","top-drawer":"Top Drawer"}[tab]),
+    /*#__PURE__*/React.createElement("div", { style: { fontSize: 14, color: C.text3 } }, "Coming soon — this show will be populated closer to the event.")
+  ) :
+  /*#__PURE__*/React.createElement("div", {
     style: {
       padding: "18px 24px 14px",
       borderBottom: "1px solid " + C.border,
@@ -3543,14 +3597,14 @@ function App() {
       color: C.text,
       letterSpacing: "-0.02em"
     }
-  }, "Ambiente 2026"), /*#__PURE__*/React.createElement("div", {
+  }, "Tradeshow Hub"), /*#__PURE__*/React.createElement("div", {
     style: {
       fontFamily: F,
       fontSize: 12,
       color: C.text3,
       marginTop: 2
     }
-  }, "Faire EU Brand Partnerships \xB7 ", ACCOUNTS.length, " accounts")), /*#__PURE__*/React.createElement("div", {
+  }, "Faire EU Brand Partnerships")), /*#__PURE__*/React.createElement("div", {
     style: {
       marginLeft: "auto",
       display: "flex",
