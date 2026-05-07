@@ -1502,9 +1502,38 @@ const COMPETITORS = {
 };
 
 // ─── 111 ACCOUNTS (Salesforce + Excel booth) ──────────────────────────────────
+const COMP_COUNTRY = {
+  "Austria": {"Beauty & Wellness":[{n:"NaturoTheke",t:"b_r89ry677tm",w:"naturotheke.at",g:"€158k",m:"EU"},{n:"Seifen-Shop",t:"b_88k5fkuu6n",w:"seifen-shop.at",g:"€53k",m:"EU"}],"Home Decor":[{n:"DKW Durkowitzer",t:"b_xf4gs3s76j",w:"durkowitzer.shop",g:"€53k",m:"EU"},{n:"Gmundner Keramik",t:"b_7pgddgmfsy",w:"gmundner.at",g:"€31k",m:"EU"},{n:"Framsohn Frottier",t:"b_emmwvj3dfu",w:"framsohnb2b.at",g:"€30k",m:"EU"}],"Jewelry":[{n:"isaMi",t:"b_j9bjc6dg4t",w:"isami.at",g:"€114k",m:"EU"}],"Paper & Novelty":[{n:"MIAO Papeterie",t:"b_gw29xc6z2u",w:"miaopapeterie.com",g:"€66k",m:"EU"}],"Women's Apparel":[{n:"Matona",t:"b_7dfgswbsnb",w:"matona.at",g:"€57k",m:"EU"}]},
+  "Denmark": {"Home Decor":[{n:"Rune-Jakobsen Design",t:"b_d7y2squ6mr",w:"rune-jakobsen.com",g:"€1.2M",m:"EU"},{n:"Koustrupco",t:"b_kq6ug5qx6k",w:"koustrupco.dk",g:"€988k",m:"EU"},{n:"House Nordic",t:"b_uu9fyfhtj4",w:"housenordic.dk",g:"€622k",m:"EU"},{n:"PLINT A/S",t:"b_125jq39e1m",w:"plint.eu",g:"€608k",m:"EU"},{n:"Nordtrice",t:"b_wtmenybdru",w:"nordtrice.com",g:"€392k",m:"EU"},{n:"ChiCura",t:"b_aafb2wyx68",w:"chicura.com",g:"€217k",m:"EU"}],"Beauty & Wellness":[{n:"LastObject",t:"b_dbsgi71dwm",w:"lastobject.com",g:"€202k",m:"EU"},{n:"SoKind",t:"b_fmp5m7gfvt",w:"sokind.com",g:"€83k",m:"EU"}],"Women's Apparel":[{n:"Moonchild Yoga Wear",t:"b_9fctpwh9m0",w:"moonchildyogawear.com",g:"€288k",m:"EU"},{n:"gai-lisva",t:"b_bah7drw639",w:"gai-lisva.com",g:"€211k",m:"EU"}],"Kids & Baby - Non-Apparel":[{n:"Magni ApS",t:"b_4ugvqkxsyg",w:"magni.dk",g:"€252k",m:"EU"},{n:"Gamcha",t:"b_5aqlq93l27",w:"gamcha.org",g:"€202k",m:"EU"}],"Paper & Novelty":[{n:"Barbo Toys",t:"b_bjsez8xwns",w:"barbo-toys.com",g:"€98k",m:"EU"},{n:"ViSSEVASSE",t:"b_nkvjkexu5z",w:"vissevasse.com",g:"€51k",m:"EU"}],"Jewelry":[{n:"Dansk Copenhagen",t:"b_rrvfyuv97m",w:"danskcopenhagen.com",g:"€65k",m:"EU"}]},
+  "Belgium": {"Home Decor":[{n:"Rex B2B Europe",t:"b_74qh3f49p5",w:"rexlondontrade.com",g:"€348k",m:"EU"},{n:"helen b",t:"b_1184p2r680",w:"helenb.be",g:"€142k",m:"EU"},{n:"Tiseco",t:"b_gzs54ch866",w:"tiseco.be",g:"€120k",m:"EU"},{n:"Libeco Home",t:"b_8faaffba",w:"libeco.com",g:"€79k",m:"EU"},{n:"Crafts by Solid",t:"b_4eusoyl56m",w:"solidinternational.be",g:"€74k",m:"EU"},{n:"MAD ABOUT MATS",t:"b_gnwxjwxnsm",w:"madaboutmats.com",g:"€47k",m:"EU"}],"Paper & Novelty":[{n:"Kaart Blanche",t:"b_a3yktzzvnd",w:"kaartblanche.com",g:"€135k",m:"EU"}],"Women's Accessories":[{n:"Neuville",t:"b_urfpz4g2xj",w:"neuville.io",g:"€160k",m:"EU"},{n:"ZEEN",t:"b_dx8kg6gxc5",w:"zeen.be",g:"€98k",m:"EU"}],"Beauty & Wellness":[{n:"Aquanova",t:"b_31o4tokohu",w:"aquanova.com",g:"€742",m:"EU"}]},
+  "France": {"Beauty & Wellness":[{n:"MAITRE SAVONITTO",t:"b_dnhf5cbs9f",w:"maitresavonitto.fr",g:"€382k",m:"EU"},{n:"Panier Des Sens",t:"b_tget9hw9yu",w:"panierdessens.fr",g:"€341k",m:"EU"},{n:"Charlotte Bio",t:"b_76avwtpabu",w:"charlottebio.fr",g:"€269k",m:"EU"},{n:"LAMAZUNA",t:"b_5ez4iwgtnl",w:"lamazuna.com",g:"€44k",m:"EU"}],"Home Decor":[{n:"Rex B2B Europe",t:"b_74qh3f49p5",w:"rexlondontrade.com",g:"€348k",m:"EU"},{n:"helen b",t:"b_1184p2r680",w:"helenb.be",g:"€142k",m:"EU"},{n:"Libeco Home",t:"b_8faaffba",w:"libeco.com",g:"€79k",m:"EU"}]},
+  "Germany": {"Beauty & Wellness":[{n:"Ancient Wisdom",t:"b_ynbum8gbeh",w:"ancientwisdom.biz",g:"€2.3M",m:"EU"},{n:"Croll & Denecke",t:"b_sunfnrnvzm",w:"croll-denecke.de",g:"€427k",m:"EU"}],"Home Decor":[{n:"blomus",t:"b_3r31rqkj",w:"blomus.com",g:"€2.2M",m:"EU"},{n:"Peugeot Saveurs",t:"b_6ncxqdexng",w:"peugeot-saveurs.com",g:"€1.9M",m:"EU"},{n:"Out of the blue KG",t:"b_bqm1j6j8aa",w:"out-of-the-blue.eu",g:"€1.0M",m:"EU"}],"Paper & Novelty":[{n:"Paperblanks",t:"b_6ybhhl39sd",w:"paperblanks.com",g:"€2.2M",m:"EU"}]},
+  "Netherlands": {"Home Decor":[{n:"Rex B2B Europe",t:"b_74qh3f49p5",w:"rexlondontrade.com",g:"€348k",m:"EU"},{n:"MAD ABOUT MATS",t:"b_gnwxjwxnsm",w:"madaboutmats.com",g:"€47k",m:"EU"}],"Paper & Novelty":[{n:"Kaart Blanche",t:"b_a3yktzzvnd",w:"kaartblanche.com",g:"€135k",m:"EU"}]},
+  "United Kingdom": {"Home Decor":[{n:"Rex B2B Europe",t:"b_74qh3f49p5",w:"rexlondontrade.com",g:"€348k",m:"EU"},{n:"helen b",t:"b_1184p2r680",w:"helenb.be",g:"€142k",m:"EU"},{n:"Libeco Home",t:"b_8faaffba",w:"libeco.com",g:"€79k",m:"EU"}],"Women's Accessories":[{n:"Neuville",t:"b_urfpz4g2xj",w:"neuville.io",g:"€160k",m:"EU"},{n:"ZEEN",t:"b_dx8kg6gxc5",w:"zeen.be",g:"€98k",m:"EU"}]},
+  "Spain": {"Women's Accessories":[{n:"Soruka Barcelona",t:"b_6x70gzqaf5",w:"soruka.es",g:"€823k",m:"EU"}],"Home Decor":[{n:"Iris Barcelona",t:"b_hxfyw4v4nj",w:"irisbarcelona.com",g:"€50k",m:"EU"}]},
+  "Italy": {"Home Decor":[{n:"Zafferano",t:"b_b9b420d5",w:"zafferanoitalia.com",g:"€130k",m:"EU"},{n:"Brandani",t:"b_mcfn778wgg",w:"brandani.it",g:"€46k",m:"EU"}]},
+  "Poland": {"Women's Apparel":[{n:"Many Mornings",t:"b_942epndq2p",w:"manymornings.com",g:"€221k",m:"EU"}]},
+  "Sweden": {"Home Decor":[{n:"Iris Hantverk",t:"b_4uez6fdi",w:"irishantverk.se",g:"€80k",m:"EU"},{n:"Ekelund Weavers",t:"b_8qlwszh7jj",w:"ekelunds.se",g:"€50k",m:"EU"}]},
+  "Portugal": {"Home Decor":[{n:"Bordallo Pinheiro",t:"b_4yvpyhjxrf",w:"bordallopinheiro.com",g:"€200k",m:"EU"},{n:"Vista Alegre",t:"b_1ae3a122",w:"vistaalegre.com",g:"€150k",m:"EU"}]},
+};
+const COMP_EU = {
+  "Home Decor":[{n:"Rune-Jakobsen Design",t:"b_d7y2squ6mr",w:"rune-jakobsen.com",g:"€1.2M",m:"EU"},{n:"Koustrupco",t:"b_kq6ug5qx6k",w:"koustrupco.dk",g:"€988k",m:"EU"},{n:"House Nordic",t:"b_uu9fyfhtj4",w:"housenordic.dk",g:"€622k",m:"EU"},{n:"PLINT A/S",t:"b_125jq39e1m",w:"plint.eu",g:"€608k",m:"EU"},{n:"Rex B2B Europe",t:"b_74qh3f49p5",w:"rexlondontrade.com",g:"€348k",m:"EU"},{n:"helen b",t:"b_1184p2r680",w:"helenb.be",g:"€142k",m:"EU"},{n:"Dyberg Larsen",t:"b_m9m6pn8cg3",w:"dyberglarsen.com",g:"€100k",m:"EU"},{n:"Walther & Co.",t:"b_2hekfqt56e",w:"waltherogco.dk",g:"€102k",m:"EU"},{n:"Mifuko",t:"b_c75rgqakku",w:"mifuko.com",g:"€92k",m:"EU"}],
+  "Beauty & Wellness":[{n:"MAITRE SAVONITTO",t:"b_dnhf5cbs9f",w:"maitresavonitto.fr",g:"€382k",m:"EU"},{n:"Panier Des Sens",t:"b_tget9hw9yu",w:"panierdessens.fr",g:"€341k",m:"EU"},{n:"Charlotte Bio",t:"b_76avwtpabu",w:"charlottebio.fr",g:"€269k",m:"EU"},{n:"LastObject",t:"b_dbsgi71dwm",w:"lastobject.com",g:"€202k",m:"EU"},{n:"NaturoTheke",t:"b_r89ry677tm",w:"naturotheke.at",g:"€158k",m:"EU"},{n:"SoKind",t:"b_fmp5m7gfvt",w:"sokind.com",g:"€83k",m:"EU"},{n:"LAMAZUNA",t:"b_5ez4iwgtnl",w:"lamazuna.com",g:"€44k",m:"EU"}],
+  "Paper & Novelty":[{n:"Cozy Publishing",t:"b_8utevpe6pj",w:"dreamcozy.com",g:"€720k",m:"EU"},{n:"Kaart Blanche",t:"b_a3yktzzvnd",w:"kaartblanche.com",g:"€135k",m:"EU"},{n:"Barbo Toys",t:"b_bjsez8xwns",w:"barbo-toys.com",g:"€98k",m:"EU"},{n:"MIAO Papeterie",t:"b_gw29xc6z2u",w:"miaopapeterie.com",g:"€66k",m:"EU"},{n:"ViSSEVASSE",t:"b_nkvjkexu5z",w:"vissevasse.com",g:"€51k",m:"EU"}],
+  "Women's Apparel":[{n:"Moonchild Yoga Wear",t:"b_9fctpwh9m0",w:"moonchildyogawear.com",g:"€288k",m:"EU"},{n:"gai-lisva",t:"b_bah7drw639",w:"gai-lisva.com",g:"€211k",m:"EU"},{n:"Danefae Copenhagen",t:"b_8u24t6gug6",w:"danefae.dk",g:"€111k",m:"EU"},{n:"Rosemunde",t:"b_cxz9p9ub5b",w:"rosemunde.com",g:"€96k",m:"EU"},{n:"Matona",t:"b_7dfgswbsnb",w:"matona.at",g:"€57k",m:"EU"}],
+  "Kids & Baby - Non-Apparel":[{n:"Magni ApS",t:"b_4ugvqkxsyg",w:"magni.dk",g:"€252k",m:"EU"},{n:"Gamcha",t:"b_5aqlq93l27",w:"gamcha.org",g:"€202k",m:"EU"},{n:"Saga Copenhagen",t:"b_9sskg942qq",w:"saga-copenhagen.com",g:"€100k",m:"EU"},{n:"Natruba",t:"b_144fk0r82s",w:"natruba.com",g:"€72k",m:"EU"}],
+  "Jewelry":[{n:"Neuville",t:"b_urfpz4g2xj",w:"neuville.io",g:"€160k",m:"EU"},{n:"isaMi",t:"b_j9bjc6dg4t",w:"isami.at",g:"€114k",m:"EU"},{n:"Dansk Copenhagen",t:"b_rrvfyuv97m",w:"danskcopenhagen.com",g:"€65k",m:"EU"}],
+  "Women's Accessories":[{n:"Neuville",t:"b_urfpz4g2xj",w:"neuville.io",g:"€160k",m:"EU"},{n:"ZEEN",t:"b_dx8kg6gxc5",w:"zeen.be",g:"€98k",m:"EU"}],
+  "Men's Apparel":[{n:"Happy Seasons",t:"b_ry64vstwcf",w:"",g:"€33k",m:"EU"},{n:"2Blind2C",t:"b_75399vu85a",w:"",g:"€24k",m:"EU"}],
+};
+const COMP_US = {
+  "Home Decor":[{n:"Nordic Ware",t:"b_4z88hnsdle",w:"nordicware.com",g:"€22k",m:"US"}],
+  "Kids & Baby - Non-Apparel":[{n:"eeBoo",t:"b_pquuag24t7",w:"eeboo.com",g:"€22k",m:"US"}],
+  "Women's Accessories":[{n:"LOQI LLC",t:"b_6wt7uvtqpl",w:"loqi.com",g:"€1.1M",m:"US/EU"}],
+  "Paper & Novelty":[{n:"LOQI LLC",t:"b_6wt7uvtqpl",w:"loqi.com",g:"€1.1M",m:"US/EU"}],
+};
 const ACCOUNTS = [
-{
-  ANNA DRZENIEK (23),
+// ANNA DRZENIEK (23),
 {
   id: "0013q00002J40I0AAJ",
   n: "Birkmann",
@@ -1530,7 +1559,7 @@ const ACCOUNTS = [
   country: "Netherlands",
   bob: "Marquee",
   lost: null,
-  booth: "9.1, F10"
+  booth: ""
 }, {
   id: "0011M00002VJ0kuQAD",
   n: "David Fussenegger",
@@ -1621,7 +1650,7 @@ const ACCOUNTS = [
   country: "Netherlands",
   bob: "P3",
   lost: null,
-  booth: "9.0, A30"
+  booth: ""
 }, {
   id: "0013q00002HzCRXAA3",
   n: "Horl",
@@ -1699,7 +1728,7 @@ const ACCOUNTS = [
   country: "Poland",
   bob: "Marquee",
   lost: null,
-  booth: "4.2, H58"
+  booth: ""
 }, {
   id: "0018X00003Gb7FDQAZ",
   n: "Mepal",
@@ -1712,7 +1741,7 @@ const ACCOUNTS = [
   country: "Netherlands",
   bob: "P3",
   lost: null,
-  booth: "9.1, E04"
+  booth: ""
 }, {
   id: "0011M00002VbHa4QAF",
   n: "New Edition",
@@ -1725,7 +1754,7 @@ const ACCOUNTS = [
   country: "Netherlands",
   bob: "P1",
   lost: null,
-  booth: "3.0, E02"
+  booth: ""
 }, {
   id: "0013q00002K3g6aAAB",
   n: "Polonapolona",
@@ -1751,7 +1780,7 @@ const ACCOUNTS = [
   country: "Netherlands",
   bob: "Marquee",
   lost: null,
-  booth: "3.0, E59"
+  booth: ""
 }, {
   id: "0013q00002HUiyfAAD",
   n: "Schulte-Ufer",
@@ -1777,7 +1806,7 @@ const ACCOUNTS = [
   country: "Netherlands",
   bob: "Marquee",
   lost: null,
-  booth: "11.0, D81"
+  booth: ""
 }, {
   id: "001Vt00000TuElyIAF",
   n: "TFA Dostmann GmbH",
@@ -1818,7 +1847,7 @@ const ACCOUNTS = [
   country: "United Kingdom",
   bob: "P3",
   lost: "Gone Dark",
-  booth: "3.0, B30"
+  booth: ""
 }, {
   id: "0013q00002FT4OkAAL",
   n: "Bordallo Pinheiro",
@@ -1833,6 +1862,19 @@ const ACCOUNTS = [
   lost: "Gone Dark",
   booth: "12.1, C04"
 }, {
+  id: "001Vt00001FEZrBIAX",
+  n: "Ceramica Alleanza",
+  token: "b_36hbvnte8c",
+  owner: "Bruno Sousa",
+  oid: "0053q00000B4jV2AAJ",
+  status: "In Progress",
+  gmv: 1215,
+  cat: "Home Decor",
+  country: "Portugal",
+  bob: "P3",
+  lost: null,
+  booth: ""
+}, {
   id: "0013q00002HxQavAAF",
   n: "Codil",
   token: "b_a6kyk9fanm",
@@ -1844,7 +1886,20 @@ const ACCOUNTS = [
   country: "Portugal",
   bob: "P3",
   lost: null,
-  booth: "9.2, A10"
+  booth: ""
+}, {
+  id: "001Vt00001CWcKXIA1",
+  n: "Dayes Ltd",
+  token: "b_napusj7rd3",
+  owner: "Bruno Sousa",
+  oid: "0053q00000B4jV2AAJ",
+  status: null,
+  gmv: 918,
+  cat: "Home Decor",
+  country: "United Kingdom",
+  bob: "P3",
+  lost: null,
+  booth: ""
 }, {
   id: "001Vt00000TqrUAIAZ",
   n: "Décor",
@@ -1883,7 +1938,7 @@ const ACCOUNTS = [
   country: "United Kingdom",
   bob: "P1",
   lost: null,
-  booth: "8.0, L90"
+  booth: ""
 }, {
   id: "0011M00002VbHO6QAN",
   n: "IF",
@@ -1896,7 +1951,7 @@ const ACCOUNTS = [
   country: "United Kingdom",
   bob: "Marquee",
   lost: null,
-  booth: "4.2, E50"
+  booth: ""
 }, {
   id: "0013q00002HwOluAAF",
   n: "Just Mugs Ltd",
@@ -1961,7 +2016,7 @@ const ACCOUNTS = [
   country: "United Kingdom",
   bob: "Marquee",
   lost: null,
-  booth: "9.0, D38"
+  booth: ""
 }, {
   id: "0011M00002VdUZiQAN",
   n: "Vista Alegre",
@@ -1989,7 +2044,7 @@ const ACCOUNTS = [
   country: "Spain",
   bob: "P3",
   lost: null,
-  booth: "4 Stände"
+  booth: ""
 }, {
   id: "0013q00002HxjRkAAJ",
   n: "Cark",
@@ -2015,7 +2070,7 @@ const ACCOUNTS = [
   country: "Spain",
   bob: "P2",
   lost: null,
-  booth: "8.0, D93"
+  booth: ""
 }, {
   id: "001Vt00000U3likIAB",
   n: "Chamilo",
@@ -2041,7 +2096,7 @@ const ACCOUNTS = [
   country: "Spain",
   bob: "P3",
   lost: null,
-  booth: "4.2, B28"
+  booth: ""
 }, {
   id: "0013q00002HVerAAAT",
   n: "Iris Barcelona",
@@ -2054,7 +2109,7 @@ const ACCOUNTS = [
   country: "Spain",
   bob: "Marquee",
   lost: "Objection",
-  booth: "9.1, E30"
+  booth: ""
 }, {
   id: "001Vt00000TvYQuIAN",
   n: "Juypal",
@@ -2080,7 +2135,20 @@ const ACCOUNTS = [
   country: "Spain",
   bob: "P1",
   lost: null,
-  booth: "4.2, B79"
+  booth: ""
+}, {
+  id: "001Vt00000U3FyvIAF",
+  n: "Plastic Forte",
+  token: "b_dpafqqqjux",
+  owner: "Daniel Rouco",
+  oid: "0053q00000B4SvDAAV",
+  status: "Prospecting",
+  gmv: 2592,
+  cat: "Home Decor",
+  country: "Spain",
+  bob: "P1",
+  lost: null,
+  booth: ""
 }, {
   id: "0013q00002K47rlAAB",
   n: "Plastiken",
@@ -2093,7 +2161,7 @@ const ACCOUNTS = [
   country: "Spain",
   bob: "P3",
   lost: null,
-  booth: "9.2, B80"
+  booth: ""
 }, {
   id: "0018X000030KEmhQAG",
   n: "PORDAMSA",
@@ -2132,7 +2200,7 @@ const ACCOUNTS = [
   country: "Spain",
   bob: "P1",
   lost: null,
-  booth: "9.1, F11"
+  booth: ""
 }, {
   id: "0013q00002J0ulxAAB",
   n: "Vidrios San Miguel",
@@ -2145,7 +2213,7 @@ const ACCOUNTS = [
   country: "Spain",
   bob: "P3",
   lost: null,
-  booth: "12.0, C54"
+  booth: ""
 },,
 // DANILO ESPOSITO (13),
 {
@@ -2160,7 +2228,7 @@ const ACCOUNTS = [
   country: "United Kingdom",
   bob: "P3",
   lost: null,
-  booth: "12.0, C54"
+  booth: ""
 }, {
   id: "001Vt00000f9uHxIAI",
   n: "Baci Milano",
@@ -2173,7 +2241,7 @@ const ACCOUNTS = [
   country: "Italy",
   bob: "P2",
   lost: null,
-  booth: "12.1, D15"
+  booth: ""
 }, {
   id: "0013q00002HwqL6AAJ",
   n: "Brandani",
@@ -2199,7 +2267,7 @@ const ACCOUNTS = [
   country: "United Kingdom",
   bob: "P2",
   lost: "Bad Fit",
-  booth: "9.0, E10"
+  booth: ""
 }, {
   id: "0013q00002HxQ4nAAF",
   n: "Domo",
@@ -2212,7 +2280,7 @@ const ACCOUNTS = [
   country: "Italy",
   bob: "P3",
   lost: null,
-  booth: "8.0, D61"
+  booth: ""
 }, {
   id: "0011M00002VbP8fQAF",
   n: "Dunoon",
@@ -2225,7 +2293,7 @@ const ACCOUNTS = [
   country: "United Kingdom",
   bob: "Marquee",
   lost: null,
-  booth: "12.1, D31"
+  booth: ""
 }, {
   id: "001Vt00000EoRzSIAV",
   n: "Essentia",
@@ -2251,7 +2319,7 @@ const ACCOUNTS = [
   country: "United Kingdom",
   bob: "Marquee",
   lost: null,
-  booth: "10.2, E31G"
+  booth: ""
 }, {
   id: "0011M00002VbFSSQA3",
   n: "Paderno",
@@ -2264,7 +2332,7 @@ const ACCOUNTS = [
   country: "Italy",
   bob: "P3",
   lost: null,
-  booth: "12.1, C01"
+  booth: ""
 }, {
   id: "0013q00002K2V6FAAV",
   n: "PURE YELLOW",
@@ -2277,7 +2345,7 @@ const ACCOUNTS = [
   country: "Greece",
   bob: "P2",
   lost: null,
-  booth: "3.0, E70"
+  booth: ""
 }, {
   id: "0013q00002K50tDAAR",
   n: "Ravi",
@@ -2290,7 +2358,7 @@ const ACCOUNTS = [
   country: "Poland",
   bob: "P1",
   lost: null,
-  booth: "9.2, E19"
+  booth: ""
 }, {
   id: "0011M00002VbYHBQA3",
   n: "Tessitura Toscana",
@@ -2303,7 +2371,7 @@ const ACCOUNTS = [
   country: "Italy",
   bob: "P1",
   lost: null,
-  booth: "3.1, J69"
+  booth: ""
 }, {
   id: "0011M00002VJPsnQAH",
   n: "Zafferano",
@@ -2316,7 +2384,7 @@ const ACCOUNTS = [
   country: "Italy",
   bob: "Marquee",
   lost: null,
-  booth: "2 Stände"
+  booth: ""
 },,
 // JUAN CEBALLOS DORADO (5),
 {
@@ -2331,7 +2399,7 @@ const ACCOUNTS = [
   country: "Spain",
   bob: null,
   lost: null,
-  booth: "2 Stände"
+  booth: ""
 }, {
   id: "0013q00002K523TAAR",
   n: "dressmezee",
@@ -2344,7 +2412,7 @@ const ACCOUNTS = [
   country: "United Kingdom",
   bob: null,
   lost: "Objection",
-  booth: "11.1, C45"
+  booth: ""
 }, {
   id: "0018X000036wVNKQA2",
   n: "Klippan",
@@ -2357,7 +2425,7 @@ const ACCOUNTS = [
   country: "United Kingdom",
   bob: "P1",
   lost: null,
-  booth: "3.1, B92"
+  booth: ""
 }, {
   id: "0013q00002HyXJwAAN",
   n: "Light & Living",
@@ -2383,7 +2451,7 @@ const ACCOUNTS = [
   country: "Spain",
   bob: "P2",
   lost: null,
-  booth: "3.0, D48"
+  booth: ""
 },,
 // KIMBERLEY BENSIMHON (4),
 {
@@ -2398,7 +2466,7 @@ const ACCOUNTS = [
   country: "Germany",
   bob: "Marquee",
   lost: "Objection",
-  booth: "3.0, D48"
+  booth: "4.2, M49"
 }, {
   id: "0011M00002VK0P2QAL",
   n: "Duralex",
@@ -2411,7 +2479,7 @@ const ACCOUNTS = [
   country: "France",
   bob: "Marquee",
   lost: "Gone Dark",
-  booth: "12.1, C61"
+  booth: ""
 }, {
   id: "0011M00002VKDibQAH",
   n: "Iris Hantverk",
@@ -2424,7 +2492,7 @@ const ACCOUNTS = [
   country: "Sweden",
   bob: "Marquee",
   lost: null,
-  booth: "3.1, A50"
+  booth: ""
 }, {
   id: "0011M00002Vc5aYQAR",
   n: "Villeroy & Boch",
@@ -2437,7 +2505,7 @@ const ACCOUNTS = [
   country: "Germany",
   bob: "Marquee",
   lost: null,
-  booth: "2 Stände"
+  booth: ""
 },,
 // LARS OOSTENBACH (7),
 {
@@ -2452,7 +2520,7 @@ const ACCOUNTS = [
   country: "Denmark",
   bob: "Marquee",
   lost: null,
-  booth: "2 Stände"
+  booth: ""
 }, {
   id: "0011M00002VIrZjQAL",
   n: "BYKLIPKLAP",
@@ -2465,7 +2533,7 @@ const ACCOUNTS = [
   country: "Denmark",
   bob: "P3",
   lost: null,
-  booth: "8.0, C89"
+  booth: ""
 }, {
   id: "0013q00002K2C2PAAV",
   n: "Dutch Decor",
@@ -2478,7 +2546,7 @@ const ACCOUNTS = [
   country: "Netherlands",
   bob: "Marquee",
   lost: null,
-  booth: "3.0, E48"
+  booth: ""
 }, {
   id: "0011M00002VIzZ7QAL",
   n: "Ekelund Weavers",
@@ -2491,7 +2559,7 @@ const ACCOUNTS = [
   country: "Sweden",
   bob: "P3",
   lost: null,
-  booth: "3.1, H21"
+  booth: ""
 }, {
   id: "0011M00002VIzppQAD",
   n: "Hübsch",
@@ -2504,7 +2572,7 @@ const ACCOUNTS = [
   country: "Denmark",
   bob: "P1",
   lost: null,
-  booth: "3.0, E10"
+  booth: ""
 }, {
   id: "0013q00002J3lKdAAJ",
   n: "Mikamax",
@@ -2530,7 +2598,7 @@ const ACCOUNTS = [
   country: "Denmark",
   bob: "Marquee",
   lost: "Gone Dark",
-  booth: "3.0, D20"
+  booth: ""
 },
 // RICHARD HAYMAN (9),
 {
@@ -2545,7 +2613,7 @@ const ACCOUNTS = [
   country: "United Kingdom",
   bob: "Marquee",
   lost: null,
-  booth: "3.0, D20"
+  booth: "9.0, B05"
 },
 {
   id: "0011M00002VJ31QQAT",
@@ -2559,7 +2627,7 @@ const ACCOUNTS = [
   country: "Denmark",
   bob: "Marquee",
   lost: null,
-  booth: "3.0, D20"
+  booth: "3.1, H60"
 },
 {
   id: "0011M00002VbTKHQA3",
@@ -2573,7 +2641,7 @@ const ACCOUNTS = [
   country: "United Kingdom",
   bob: "Marquee",
   lost: null,
-  booth: "3.0, D20"
+  booth: ""
 },
 {
   id: "0013q00002HxjMQAAZ",
@@ -2587,7 +2655,7 @@ const ACCOUNTS = [
   country: "Denmark",
   bob: "Marquee",
   lost: null,
-  booth: "3.0, D20"
+  booth: "3.0, B10"
 },
 {
   id: "0011M00002VJ3fmQAD",
@@ -2601,7 +2669,7 @@ const ACCOUNTS = [
   country: "United Kingdom",
   bob: "Marquee",
   lost: null,
-  booth: "3.0, D20"
+  booth: "4.2, K60E"
 },
 {
   id: "0011M00002VbPOnQAN",
@@ -2615,7 +2683,7 @@ const ACCOUNTS = [
   country: "United Kingdom",
   bob: "Marquee",
   lost: null,
-  booth: "3.0, D20"
+  booth: "9.0, B35"
 },
 {
   id: "0011M00002Vc4teQAB",
@@ -2629,7 +2697,7 @@ const ACCOUNTS = [
   country: "United Kingdom",
   bob: "Marquee",
   lost: null,
-  booth: "3.0, D20"
+  booth: ""
 },
 {
   id: "0011M00002VJ0IAQA1",
@@ -2643,7 +2711,7 @@ const ACCOUNTS = [
   country: "United Kingdom",
   bob: "Marquee",
   lost: null,
-  booth: "3.0, D20"
+  booth: "3.1, G66"
 },
 {
   id: "0011M00002VbO7SQAV",
@@ -2657,7 +2725,7 @@ const ACCOUNTS = [
   country: "United Kingdom",
   bob: "Marquee",
   lost: null,
-  booth: "3.0, D20"
+  booth: "3.0, F49"
 },
 // YASMINE HAKIM (11),
 {
@@ -2672,7 +2740,7 @@ const ACCOUNTS = [
   country: "Belgium",
   bob: "P1",
   lost: null,
-  booth: "3.0, D20"
+  booth: "9.1, E03"
 },
 {
   id: "0011M00002VIzfeQAD",
@@ -2686,7 +2754,7 @@ const ACCOUNTS = [
   country: "Belgium",
   bob: "P1",
   lost: null,
-  booth: "3.0, D20"
+  booth: "3.1, D81"
 },
 {
   id: "0013q00002HV98yAAD",
@@ -2700,7 +2768,7 @@ const ACCOUNTS = [
   country: "France",
   bob: "Marquee",
   lost: null,
-  booth: "3.0, D20"
+  booth: "3.0, B89"
 },
 {
   id: "0011M00002Vc8lMQAR",
@@ -2714,7 +2782,7 @@ const ACCOUNTS = [
   country: "France",
   bob: "Marquee",
   lost: null,
-  booth: "3.0, D20"
+  booth: ""
 },
 {
   id: "0013q00002Hy4MGAAZ",
@@ -2728,7 +2796,7 @@ const ACCOUNTS = [
   country: "France",
   bob: "Marquee",
   lost: null,
-  booth: "3.0, D20"
+  booth: "8.0, J89"
 },
 {
   id: "0013q00002HxPzkAAF",
@@ -2742,7 +2810,7 @@ const ACCOUNTS = [
   country: "Belgium",
   bob: "P1",
   lost: null,
-  booth: "3.0, D20"
+  booth: "10.1, E59"
 },
 {
   id: "0013q00002HzayVAAR",
@@ -2756,7 +2824,7 @@ const ACCOUNTS = [
   country: "France",
   bob: "Marquee",
   lost: null,
-  booth: "3.0, D20"
+  booth: "8.0, E76"
 },
 {
   id: "001Vt000019PYjxIAG",
@@ -2770,7 +2838,7 @@ const ACCOUNTS = [
   country: "France",
   bob: null,
   lost: null,
-  booth: "3.0, D20"
+  booth: ""
 },
 {
   id: "001Vt00000TtmHxIAJ",
@@ -2784,7 +2852,7 @@ const ACCOUNTS = [
   country: "France",
   bob: null,
   lost: null,
-  booth: "3.0, D20"
+  booth: "5 Stände"
 },
 {
   id: "0011M00002VKFtjQAH",
@@ -2798,7 +2866,7 @@ const ACCOUNTS = [
   country: "France",
   bob: "Marquee",
   lost: null,
-  booth: "3.0, D20"
+  booth: "3.0, A90"
 },
 {
   id: "001Vt00000TsepPIAR",
@@ -2812,7 +2880,7 @@ const ACCOUNTS = [
   country: "France",
   bob: null,
   lost: null,
-  booth: "3.0, D20"
+  booth: "9.1, F34"
 },
 {
   id: "0018X00003FGQZNQA5",
@@ -2826,7 +2894,7 @@ const ACCOUNTS = [
   country: "Belgium",
   bob: null,
   lost: null,
-  booth: "3.0, D20"
+  booth: "4.2, F41"
 },
 // PIERRE-ANTOINE MERCIER-HANDISYDE (5),
 {
@@ -2841,7 +2909,7 @@ const ACCOUNTS = [
   country: "Belgium",
   bob: "P2",
   lost: null,
-  booth: "3.0, D20"
+  booth: "3.1, J57"
 },
 {
   id: "0013q00002HwZUHAA3",
@@ -2855,7 +2923,7 @@ const ACCOUNTS = [
   country: "Belgium",
   bob: "P3",
   lost: null,
-  booth: "3.0, D20"
+  booth: "3.0, D60"
 },
 {
   id: "0018X00002yPh2uQAC",
@@ -2869,7 +2937,7 @@ const ACCOUNTS = [
   country: "Belgium",
   bob: "P3",
   lost: null,
-  booth: "3.0, D20"
+  booth: "3.1, D30"
 },
 {
   id: "0018X000030LBXaQAO",
@@ -2883,7 +2951,7 @@ const ACCOUNTS = [
   country: "Belgium",
   bob: "P3",
   lost: null,
-  booth: "3.0, D20"
+  booth: "3.0, C60"
 },
 {
   id: "0011M00002VIz9qQAD",
@@ -2897,10 +2965,9 @@ const ACCOUNTS = [
   country: "Belgium",
   bob: "P3",
   lost: null,
-  booth: "3.0, D20"
-
-}];
-
+  booth: "3.1, H92"
+}
+];
 
 // ── CARD ──────────────────────────────────────────────────────────────────────
 
@@ -2939,7 +3006,13 @@ function AccountCard({
     ae: [],
     brand: []
   };
-  const comps = (COMPETITORS[a.cat] || []).filter(c => c.t !== a.token).slice(0, 4);
+  const _cPool = ((COMP_COUNTRY[a.country] || {})[a.cat] || []).filter(c => c.t !== a.token);
+  const _ePool = (COMP_EU[a.cat] || []).filter(c => c.t !== a.token && !_cPool.find(x => x.t === c.t));
+  const _uPool = (COMP_US[a.cat] || []).filter(c => c.t !== a.token);
+  const _cCount = Math.min(_cPool.length, Math.max(Math.ceil(7 * 0.5), 3));
+  const _uCount = Math.min(2, _uPool.length);
+  const _eCount = Math.min(_ePool.length, 7 - _cCount - _uCount);
+  const comps = [..._cPool.slice(0, _cCount), ..._ePool.slice(0, _eCount), ..._uPool.slice(0, _uCount)];
   const pb = a.lost ? PLAYBOOK[a.lost] || PLAYBOOK["Other"] : null;
   const lc = lastContactInfo(s.lc);
   const sfdcURL = "https://indigofairorg.lightning.force.com/lightning/r/Account/" + a.id + "/view";
@@ -2988,824 +3061,31 @@ function AccountCard({
     const compList = comps.map(c => c.n).join(", ") || "similar brands on Faire";
     const lostCtx = a.lost ? "Previous objection/lost reason: " + a.lost + "\n" : "";
     const meetingCtx = (notes || transcript) ? "Meeting notes: " + (notes || transcript) : "We had a good conversation at Ambiente 2026.";
-
     const catchUpPrompt = "Write a short, warm follow-up email from " + a.owner + " at Faire to the contact at " + a.n + " (" + a.country + ", " + a.cat + ") after meeting at Ambiente 2026.\n\n" +
       lostCtx + meetingCtx + "\nLanguage: " + lang + "\n\n" +
-      "INSTRUCTIONS:\n" +
-      "Write in " + lang + ". Keep it short and conversational. Sound like a real person. No dashes to start lines. No bullet points. Maximum 4 short paragraphs.\n\n" +
-      "STRUCTURE:\n" +
-      "1. SUBJECT LINE: " + a.n + " & Faire — Follow up from Ambiente\n" +
-      "2. GREETING: Hi [contact first name],\n" +
-      "3. INTRO (1-2 sentences): Warm opener referencing the meeting. Do NOT introduce yourself — they already met. Example: Thank you for your time at Ambiente. It was great to meet you. Adapt based on meeting notes.\n" +
-      "4. DEMAND HOOK (1-2 sentences): Mention retailers have been searching for brands like " + a.n + " on Faire. Reference " + compList + " as examples of similar brands already on Faire.\n" +
-      "5. CTA (1-2 sentences): Invite them to schedule a call. Use [CALENDAR_LINK] as placeholder.\n" +
-      "6. SIGN OFF: Looking forward to connecting. Very best, " + a.owner + "\n\n" +
-      "Write only the email, nothing else.";
-
+      "INSTRUCTIONS: Write in " + lang + ". Max 4 short paragraphs. Warm, human, conversational. No dashes to start lines. No bullet points.\n\n" +
+      "STRUCTURE:\n1. SUBJECT: " + a.n + " & Faire - Follow up from Ambiente\n" +
+      "2. GREETING: Hi [first name],\n" +
+      "3. INTRO: Warm opener referencing the meeting. Do NOT introduce yourself. Example: Thank you for your time at Ambiente. It was great to meet you. Adapt from meeting notes.\n" +
+      "4. DEMAND HOOK: Mention retailers have been searching for brands like " + a.n + " on Faire. Reference " + compList + " as similar brands already on Faire.\n" +
+      "5. CTA: Invite them to schedule a call. Use [CALENDAR_LINK].\n" +
+      "6. SIGN OFF: Looking forward to connecting. Very best, " + a.owner + "\n\nWrite only the email.";
     const demoPrompt = "Write a follow-up email from " + a.owner + " at Faire to the contact at " + a.n + " (" + a.country + ", " + a.cat + ") after giving a full demo at Ambiente 2026.\n\n" +
-      lostCtx + meetingCtx + "\neCommerce platform: " + (s.sys || "unknown") + "\nLanguage: " + lang + "\n\n" +
-      "INSTRUCTIONS:\n" +
-      "Write in " + lang + ". Warm, human, conversational. Never use dashes or hyphens to start a line. Write as sentences and short paragraphs, not bullet points.\n\n" +
-      "STRUCTURE:\n" +
-      "1. SUBJECT LINE: " + a.n + " & Faire — Next Steps\n" +
-      "2. GREETING: Hi [contact first name],\n" +
-      "3. INTRO (2-3 sentences): Thank them for time at Ambiente. Reference something specific from the conversation.\n" +
-      "4. BRIDGE: Reference something specific they said and what you are doing as a result.\n" +
+      lostCtx + meetingCtx + "\neCommerce: " + (s.sys || "unknown") + "\nLanguage: " + lang + "\n\n" +
+      "INSTRUCTIONS: Write in " + lang + ". Warm, human, no dashes to start lines, no bullet points, write as sentences.\n\n" +
+      "STRUCTURE:\n1. SUBJECT: " + a.n + " & Faire - Next Steps\n" +
+      "2. GREETING: Hi [first name],\n" +
+      "3. INTRO: Thank them, reference something specific from the conversation.\n" +
+      "4. BRIDGE: Reference something they said and what you are doing as a result.\n" +
       "5. FAIRE PITCH: Faire is the leading wholesale platform, connecting brands with over 800,000 retailers worldwide (almost 90,000 in the UK alone, our second-strongest market after the US). We are also Shopify wholesale partners, which means brands can create a shop on Faire in minutes with our automated product, inventory and order sync.\n" +
-      "6. SUMMARY OF TERMS heading — write each point as a sentence, no dashes:\n" +
-      "Free to join and no commitment. Free automated sync via Shopify (products, inventory and orders). Marketing tools included with your Faire account. Shipping included for brands in all transactions (with our partners UPS, DPD and DHL Express) or ship on your own and get reimbursed. Next day payment or 30 days with no fee (Next day payment has a 3% processing fee). Return costs are covered by Faire for each customer's first order.\n" +
-      "7. COMMISSION heading — bold the percentages, write as sentences:\n" +
-      "25% commission on a customer's opening order. 15% commission on all reorders. 0% commission for any customer the brand invites through their unique Faire Direct link. If the customer is new to Faire, they receive one year of free shipping with the brand, plus 50% off their first order (up to €150), fully funded by Faire.\n" +
-      "8. SUMMARY PARAGRAPH: In summary, Faire handles most administrative work and automates your wholesale business, allowing you to save time, money, and grow faster. You have full control over your shop and can decide where, whom, and how to sell by setting which countries you want to sell to, the minimum order amount, the lead time, and whether to accept or reject orders, and by managing customer relationships directly.\n" +
+      "6. SUMMARY OF TERMS heading - write each as a sentence, no dashes: Free to join and no commitment. Free automated sync via Shopify (products, inventory and orders). Marketing tools included with your Faire account. Shipping included for brands in all transactions (with our partners UPS, DPD and DHL Express) or ship on your own and get reimbursed. Next day payment or 30 days with no fee (Next day payment has a 3% processing fee). Return costs are covered by Faire for each customer's first order.\n" +
+      "7. COMMISSION heading - bold the percentages, write as sentences: 25% commission on a customer's opening order. 15% commission on all reorders. 0% commission for any customer the brand invites through their unique Faire Direct link. If the customer is new to Faire, they receive one year of free shipping with the brand, plus 50% off their first order (up to EUR150), fully funded by Faire.\n" +
+      "8. SUMMARY: In summary, Faire handles most administrative work and automates your wholesale business, allowing you to save time, money, and grow faster. You have full control over your shop and can decide where, whom, and how to sell by setting which countries you want to sell to, the minimum order amount, the lead time, and whether to accept or reject orders, and by managing customer relationships directly.\n" +
       "9. SOCIAL PROOF: Mention " + compList + " as examples of brands already selling on Faire.\n" +
-      "10. NEXT STEPS heading: Ask for feedback, offer a follow-up call, use [CALENDAR_LINK]. Adapt based on what was agreed.\n" +
-      "11. SIGN OFF: Warm closing, " + a.owner + "\n\n" +
-      "Write only the email, nothing else.";
-
+      "10. NEXT STEPS heading: Ask for feedback, offer follow-up call, use [CALENDAR_LINK]. Adapt from meeting notes.\n" +
+      "11. SIGN OFF: Warm closing, " + a.owner + "\n\nWrite only the email.";
     const prompt = demoType === "demo" ? demoPrompt : catchUpPrompt;
     window.open("https://claude.ai/new?q=" + encodeURIComponent(prompt), "_blank");
-  };
-
-  // ── STYLE HELPERS ──────────────────────────────────────────────────────────
-  const pill = (text, bg, color) => /*#__PURE__*/React.createElement("span", {
-    style: {
-      display: "inline-flex",
-      alignItems: "center",
-      padding: "2px 8px",
-      borderRadius: 5,
-      fontSize: 11,
-      fontWeight: 600,
-      background: bg,
-      color,
-      fontFamily: F
-    }
-  }, text);
-  const sectionLabel = text => /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontFamily: F,
-      fontSize: 10,
-      fontWeight: 600,
-      color: C.text3,
-      textTransform: "uppercase",
-      letterSpacing: "0.08em",
-      marginBottom: 8
-    }
-  }, text);
-  const emailCard = (em, direction) => {
-    const isAE = direction === "ae";
-    return /*#__PURE__*/React.createElement("div", {
-      key: em.subject,
-      style: {
-        padding: "9px 12px",
-        borderRadius: 7,
-        marginBottom: 6,
-        background: isAE ? C.blueLt : C.greenLt,
-        borderLeft: "3px solid " + (isAE ? C.blue : C.green)
-      }
-    }, /*#__PURE__*/React.createElement("div", {
-      style: {
-        display: "flex",
-        justifyContent: "space-between",
-        gap: 8,
-        marginBottom: em.snippet ? 4 : 0
-      }
-    }, /*#__PURE__*/React.createElement("span", {
-      style: {
-        fontFamily: F,
-        fontSize: 12,
-        fontWeight: 500,
-        color: isAE ? C.blue : C.green,
-        overflow: "hidden",
-        textOverflow: "ellipsis",
-        whiteSpace: "nowrap"
-      }
-    }, em.subject), /*#__PURE__*/React.createElement("span", {
-      style: {
-        fontFamily: FM,
-        fontSize: 10,
-        color: C.text3,
-        flexShrink: 0
-      }
-    }, em.date)), em.snippet && /*#__PURE__*/React.createElement("p", {
-      style: {
-        margin: 0,
-        fontFamily: F,
-        fontSize: 11,
-        color: C.text2,
-        lineHeight: 1.5
-      }
-    }, em.snippet));
-  };
-  return /*#__PURE__*/React.createElement("div", {
-    style: {
-      border: "1px solid " + borderColor,
-      background: cardBg,
-      borderRadius: 10,
-      marginBottom: 8,
-      overflow: "hidden",
-      transition: "all 0.15s",
-      boxShadow: open ? "0 3px 16px rgba(0,0,0,0.08)" : "0 1px 3px rgba(0,0,0,0.05)"
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    onClick: () => setOpen(o => !o),
-    style: {
-      padding: "13px 16px 10px",
-      cursor: "pointer",
-      display: "flex",
-      gap: 12,
-      justifyContent: "space-between",
-      alignItems: "flex-start"
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      flex: 1,
-      minWidth: 0
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: "flex",
-      flexWrap: "wrap",
-      gap: 6,
-      alignItems: "center",
-      marginBottom: 5
-    }
-  }, /*#__PURE__*/React.createElement("span", {
-    style: {
-      fontFamily: F,
-      fontSize: 15,
-      fontWeight: 700,
-      color: C.text
-    }
-  }, a.n), gmvLabel(a.gmv) && /*#__PURE__*/React.createElement("span", {
-    style: {
-      fontFamily: F,
-      fontSize: 11,
-      color: C.red,
-      fontWeight: 500
-    }
-  }, gmvLabel(a.gmv)), a.status && pill(a.status, sc(a.status)[0], sc(a.status)[1]), a.bob && /*#__PURE__*/React.createElement("span", {
-    style: {
-      fontFamily: FM,
-      fontSize: 10,
-      color: C.text3,
-      padding: "1px 6px",
-      border: "1px solid " + C.border,
-      borderRadius: 4
-    }
-  }, a.bob), inb && /*#__PURE__*/React.createElement("span", {
-    style: {
-      fontFamily: F,
-      fontSize: 10,
-      fontWeight: 600,
-      color: "#B87333",
-      padding: "2px 7px",
-      border: "1px solid #DEB887",
-      borderRadius: 20,
-      background: "#FDF5E6"
-    }
-  }, "\uD83D\uDCE5 Inbound"), s.sys && /*#__PURE__*/React.createElement("span", {
-    style: {
-      fontFamily: F,
-      fontSize: 10,
-      color: C.blue,
-      padding: "1px 6px",
-      border: "1px solid " + C.border,
-      borderRadius: 4,
-      background: C.blueLt
-    }
-  }, s.sys.split(";")[0])), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: "flex",
-      flexWrap: "wrap",
-      gap: 10,
-      alignItems: "center"
-    }
-  }, a.booth && /*#__PURE__*/React.createElement("span", {
-    style: {
-      fontFamily: F,
-      fontSize: 12,
-      color: C.text2
-    }
-  }, "\uD83D\uDCCD ", a.booth), a.country && /*#__PURE__*/React.createElement("span", {
-    style: {
-      fontFamily: F,
-      fontSize: 12,
-      color: C.text3
-    }
-  }, "\uD83C\uDF0D ", a.country), a.cat && /*#__PURE__*/React.createElement("span", {
-    style: {
-      fontFamily: F,
-      fontSize: 12,
-      color: C.text3
-    }
-  }, a.cat), s.lc && /*#__PURE__*/React.createElement("span", {
-    style: {
-      fontFamily: F,
-      fontSize: 12,
-      color: lc.color,
-      fontWeight: 500
-    }
-  }, "\uD83D\uDD50 ", lc.text), a.lost && /*#__PURE__*/React.createElement("span", {
-    style: {
-      fontFamily: F,
-      fontSize: 11,
-      fontWeight: 600,
-      color: C.red
-    }
-  }, "\u26A0 ", a.lost))), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: "flex",
-      gap: 6,
-      flexShrink: 0,
-      alignItems: "center"
-    }
-  }, s.w && /*#__PURE__*/React.createElement("a", {
-    href: "https://" + s.w,
-    target: "_blank",
-    rel: "noreferrer",
-    onClick: e => e.stopPropagation(),
-    style: {
-      fontFamily: F,
-      fontSize: 11,
-      color: C.text3,
-      textDecoration: "none",
-      padding: "4px 9px",
-      border: "1px solid " + C.border,
-      borderRadius: 6,
-      background: C.muted
-    }
-  }, "\u2197"), /*#__PURE__*/React.createElement("a", {
-    href: sfdcURL,
-    target: "_blank",
-    rel: "noreferrer",
-    onClick: e => e.stopPropagation(),
-    style: {
-      fontFamily: F,
-      fontSize: 11,
-      color: C.blue,
-      textDecoration: "none",
-      padding: "4px 9px",
-      border: "1px solid " + C.border,
-      borderRadius: 6,
-      background: C.blueLt,
-      fontWeight: 600
-    }
-  }, "SFDC"), faireURL && /*#__PURE__*/React.createElement("a", {
-    href: faireURL,
-    target: "_blank",
-    rel: "noreferrer",
-    onClick: e => e.stopPropagation(),
-    style: {
-      fontFamily: F,
-      fontSize: 11,
-      color: C.green,
-      textDecoration: "none",
-      padding: "4px 9px",
-      border: "1px solid " + C.border,
-      borderRadius: 6,
-      background: C.greenLt,
-      fontWeight: 600
-    }
-  }, "Faire \u2197"), /*#__PURE__*/React.createElement("span", {
-    style: {
-      color: C.text3,
-      fontSize: 12
-    }
-  }, open ? "▲" : "▼"))), /*#__PURE__*/React.createElement("div", {
-    style: {
-      padding: "5px 16px",
-      borderTop: "1px solid " + C.border,
-      background: C.muted,
-      display: "flex",
-      gap: 6
-    }
-  }, [["none", "⚪ Not visited", C.text3], ["positive", "🟢 Positive", C.green], ["negative", "🔴 Not interested", C.red]].map(([r, lbl, col]) => /*#__PURE__*/React.createElement("button", {
-    key: r,
-    onClick: () => setReaction(r),
-    style: {
-      fontFamily: F,
-      padding: "3px 10px",
-      borderRadius: 20,
-      fontSize: 11,
-      cursor: "pointer",
-      background: reaction === r ? col + "22" : "transparent",
-      border: "1px solid " + (reaction === r ? col : C.border),
-      color: reaction === r ? col : C.text3,
-      transition: "all 0.15s"
-    }
-  }, lbl))), open && /*#__PURE__*/React.createElement("div", {
-    style: {
-      padding: "16px",
-      borderTop: "1px solid " + C.border
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: "grid",
-      gridTemplateColumns: "1fr 1fr",
-      gap: "4px 24px",
-      padding: "12px 14px",
-      background: C.muted,
-      borderRadius: 8,
-      border: "1px solid " + C.border,
-      marginBottom: 14
-    }
-  }, [["Status", a.status], ["Country", a.country], ["Category", a.cat], ["BoB", a.bob], ["Pred. GMV", gmvLabel(a.gmv)], ["Last Contact", s.lc ? lc.text : null], ["Website", s.w], ["eCommerce", s.sys], ["Integration", s.int], ["Lost Reason", a.lost], ["Lost Type", s.lt], ["Lost Detail", s.ld]].filter(([, v]) => v).map(([k, v]) => /*#__PURE__*/React.createElement("div", {
-    key: k,
-    style: {
-      display: "flex",
-      gap: 8,
-      marginBottom: 4,
-      alignItems: "baseline"
-    }
-  }, /*#__PURE__*/React.createElement("span", {
-    style: {
-      fontFamily: F,
-      fontSize: 10,
-      color: C.text3,
-      fontWeight: 600,
-      minWidth: 90,
-      flexShrink: 0,
-      textTransform: "uppercase",
-      letterSpacing: "0.05em"
-    }
-  }, k), /*#__PURE__*/React.createElement("span", {
-    style: {
-      fontFamily: F,
-      fontSize: 12,
-      color: k === "Last Contact" ? lc.color : C.text2,
-      wordBreak: "break-word"
-    }
-  }, v)))), /*#__PURE__*/React.createElement("div", {
-    style: {
-      marginBottom: 14
-    }
-  }, sectionLabel("📥 Inbound Attribution"), inb ? /*#__PURE__*/React.createElement("div", {
-    style: {
-      padding: "10px 14px",
-      background: "#FDF5E6",
-      borderRadius: 8,
-      border: "1px solid #DEB887",
-      display: "flex",
-      gap: 24,
-      flexWrap: "wrap"
-    }
-  }, /*#__PURE__*/React.createElement("span", {
-    style: {
-      fontFamily: F,
-      fontSize: 12,
-      color: "#8B6914"
-    }
-  }, "Date ", /*#__PURE__*/React.createElement("strong", {
-    style: {
-      color: C.text
-    }
-  }, inb.d)), /*#__PURE__*/React.createElement("span", {
-    style: {
-      fontFamily: F,
-      fontSize: 12,
-      color: "#8B6914"
-    }
-  }, "Email ", /*#__PURE__*/React.createElement("strong", {
-    style: {
-      color: C.text
-    }
-  }, inb.e))) : /*#__PURE__*/React.createElement("div", {
-    style: {
-      padding: "8px 14px",
-      background: C.muted,
-      borderRadius: 8,
-      border: "1px solid " + C.border
-    }
-  }, /*#__PURE__*/React.createElement("span", {
-    style: {
-      fontFamily: F,
-      fontSize: 12,
-      color: C.text3
-    }
-  }, "No inbound attribution on record"))), /*#__PURE__*/React.createElement("div", {
-    style: {
-      marginBottom: 14
-    }
-  }, sectionLabel("📧 Email History"), eh.ae.length > 0 || eh.brand.length > 0 ? /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: "grid",
-      gridTemplateColumns: "1fr 1fr",
-      gap: 10
-    }
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontFamily: F,
-      fontSize: 10,
-      fontWeight: 600,
-      color: C.blue,
-      textTransform: "uppercase",
-      letterSpacing: "0.05em",
-      marginBottom: 6
-    }
-  }, "AE \u2192 Brand"), eh.ae.length > 0 ? eh.ae.map(em => emailCard(em, "ae")) : /*#__PURE__*/React.createElement("div", {
-    style: {
-      padding: "8px 12px",
-      background: C.muted,
-      borderRadius: 7,
-      border: "1px solid " + C.border
-    }
-  }, /*#__PURE__*/React.createElement("span", {
-    style: {
-      fontFamily: F,
-      fontSize: 12,
-      color: C.text3
-    }
-  }, "None logged"))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontFamily: F,
-      fontSize: 10,
-      fontWeight: 600,
-      color: C.green,
-      textTransform: "uppercase",
-      letterSpacing: "0.05em",
-      marginBottom: 6
-    }
-  }, "Brand \u2192 AE"), eh.brand.length > 0 ? eh.brand.map(em => emailCard(em, "brand")) : /*#__PURE__*/React.createElement("div", {
-    style: {
-      padding: "8px 12px",
-      background: C.muted,
-      borderRadius: 7,
-      border: "1px solid " + C.border
-    }
-  }, /*#__PURE__*/React.createElement("span", {
-    style: {
-      fontFamily: F,
-      fontSize: 12,
-      color: C.text3
-    }
-  }, "No replies logged")))) : /*#__PURE__*/React.createElement("div", {
-    style: {
-      padding: "8px 14px",
-      background: C.muted,
-      borderRadius: 8,
-      border: "1px solid " + C.border
-    }
-  }, /*#__PURE__*/React.createElement("span", {
-    style: {
-      fontFamily: F,
-      fontSize: 12,
-      color: C.text3
-    }
-  }, "No emails logged in Salesforce"))), /*#__PURE__*/React.createElement("div", {
-    style: {
-      marginBottom: 14
-    }
-  }, sectionLabel("✦ Brand Description"), desc ? /*#__PURE__*/React.createElement("p", {
-    style: {
-      margin: 0,
-      fontFamily: F,
-      fontSize: 13,
-      color: C.text2,
-      lineHeight: 1.7,
-      fontStyle: "italic",
-      padding: "10px 14px",
-      background: C.muted,
-      borderRadius: 8,
-      border: "1px solid " + C.border
-    }
-  }, desc) : /*#__PURE__*/React.createElement("button", {
-    onClick: genDesc,
-    disabled: loading === "desc",
-    style: {
-      fontFamily: F,
-      padding: "7px 14px",
-      borderRadius: 7,
-      fontSize: 12,
-      cursor: "pointer",
-      background: C.card,
-      border: "1px solid " + C.border,
-      color: C.text2,
-      opacity: loading === "desc" ? 0.5 : 1
-    }
-  }, loading === "desc" ? "Generating…" : "✨ Generate brand description")), comps.length > 0 && /*#__PURE__*/React.createElement("div", {
-    style: {
-      marginBottom: 14
-    }
-  }, sectionLabel("🏪 Similar Brands on Faire (" + a.cat + ")"), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: "flex",
-      flexWrap: "wrap",
-      gap: 6
-    }
-  }, comps.map(c => /*#__PURE__*/React.createElement("a", {
-    key: c.n,
-    href: "https://faire.com/brand/" + c.t,
-    target: "_blank",
-    rel: "noreferrer",
-    style: {
-      fontFamily: F,
-      fontSize: 12,
-      color: C.green,
-      textDecoration: "none",
-      padding: "4px 11px",
-      border: "1px solid " + C.border,
-      borderRadius: 6,
-      background: C.greenLt,
-      display: "flex",
-      gap: 6,
-      alignItems: "center"
-    }
-  }, c.n, " ", /*#__PURE__*/React.createElement("span", {
-    style: {
-      color: C.text3,
-      fontSize: 11
-    }
-  }, c.g))))), pb && /*#__PURE__*/React.createElement("div", {
-    style: {
-      marginBottom: 14,
-      borderRadius: 8,
-      overflow: "hidden",
-      border: "1px solid " + C.border
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      padding: "8px 14px",
-      background: C.muted,
-      display: "flex",
-      alignItems: "center",
-      gap: 8
-    }
-  }, /*#__PURE__*/React.createElement("span", {
-    style: {
-      fontFamily: F,
-      fontSize: 10,
-      fontWeight: 700,
-      color: pb.col,
-      textTransform: "uppercase",
-      letterSpacing: "0.08em"
-    }
-  }, "\uD83D\uDCA1 ", a.lost, " Playbook")), /*#__PURE__*/React.createElement("div", {
-    style: {
-      padding: "12px 14px"
-    }
-  }, /*#__PURE__*/React.createElement("p", {
-    style: {
-      margin: "0 0 8px",
-      fontFamily: F,
-      fontSize: 12,
-      color: C.text2,
-      lineHeight: 1.7
-    }
-  }, /*#__PURE__*/React.createElement("strong", null, "FFF:"), " ", pb.fff), /*#__PURE__*/React.createElement("p", {
-    style: {
-      margin: "0 0 8px",
-      fontFamily: F,
-      fontSize: 12,
-      color: C.text2,
-      lineHeight: 1.7
-    }
-  }, /*#__PURE__*/React.createElement("strong", null, "Anaconda:"), " ", pb.anaconda), /*#__PURE__*/React.createElement("p", {
-    style: {
-      margin: 0,
-      fontFamily: F,
-      fontSize: 12,
-      color: C.text3,
-      lineHeight: 1.7,
-      fontStyle: "italic"
-    }
-  }, pb.micro))), /*#__PURE__*/React.createElement("div", {
-    style: {
-      borderTop: "1px solid " + C.border,
-      paddingTop: 14
-    }
-  }, sectionLabel("🎤 Meeting"), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: "flex",
-      gap: 6,
-      marginBottom: 10,
-      alignItems: "center",
-      flexWrap: "wrap"
-    }
-  }, [["first", "First Contact"], ["demo", "Full Demo"]].map(([v, lbl]) => /*#__PURE__*/React.createElement("button", {
-    key: v,
-    onClick: () => setDemoType(v),
-    style: {
-      fontFamily: F,
-      padding: "5px 13px",
-      borderRadius: 20,
-      fontSize: 12,
-      cursor: "pointer",
-      fontWeight: demoType === v ? 600 : 400,
-      background: demoType === v ? v === "demo" ? C.greenLt : C.blueLt : "transparent",
-      border: "1px solid " + (demoType === v ? v === "demo" ? C.green : C.blue : C.border),
-      color: demoType === v ? v === "demo" ? C.green : C.blue : C.text3,
-      transition: "all 0.15s"
-    }
-  }, lbl)), /*#__PURE__*/React.createElement("button", {
-    onClick: recording ? stopRec : startRec,
-    style: {
-      fontFamily: F,
-      padding: "5px 13px",
-      borderRadius: 20,
-      fontSize: 12,
-      cursor: "pointer",
-      marginLeft: "auto",
-      background: recording ? C.redLt : C.muted,
-      border: "1px solid " + (recording ? C.red : C.border),
-      color: recording ? C.red : C.text3,
-      transition: "all 0.15s"
-    }
-  }, recording ? "⏹ Stop" : "🎙 Record"), recording && /*#__PURE__*/React.createElement("span", {
-    style: {
-      fontFamily: F,
-      fontSize: 11,
-      color: C.red
-    }
-  }, "\u25CF Live")), /*#__PURE__*/React.createElement("textarea", {
-    value: transcript,
-    onChange: e => setTranscript(e.target.value),
-    placeholder: "Transcript appears here while recording, or type notes...",
-    style: {
-      width: "100%",
-      minHeight: 60,
-      padding: "10px 12px",
-      boxSizing: "border-box",
-      fontFamily: F,
-      fontSize: 12,
-      lineHeight: 1.6,
-      color: C.text,
-      background: C.muted,
-      border: "1px solid " + C.border,
-      borderRadius: 8,
-      resize: "vertical",
-      marginBottom: 6,
-      outline: "none"
-    }
-  }), /*#__PURE__*/React.createElement("textarea", {
-    value: notes,
-    onChange: e => setNotes(e.target.value),
-    placeholder: "Key contacts, interests, next steps...",
-    style: {
-      width: "100%",
-      minHeight: 48,
-      padding: "10px 12px",
-      boxSizing: "border-box",
-      fontFamily: F,
-      fontSize: 12,
-      lineHeight: 1.6,
-      color: C.text,
-      background: C.muted,
-      border: "1px solid " + C.border,
-      borderRadius: 8,
-      resize: "vertical",
-      marginBottom: 10,
-      outline: "none"
-    }
-  }), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: "flex",
-      gap: 8
-    }
-  }, /*#__PURE__*/React.createElement("button", {
-    onClick: genSummary,
-    disabled: !transcript.trim() && !notes.trim() || loading === "sum",
-    style: {
-      flex: 1,
-      padding: "9px",
-      fontFamily: F,
-      fontSize: 12,
-      fontWeight: 500,
-      cursor: "pointer",
-      background: C.muted,
-      border: "1px solid " + C.border,
-      color: C.text2,
-      borderRadius: 8,
-      opacity: !transcript.trim() && !notes.trim() ? 0.4 : 1
-    }
-  }, "✨ Summarise in Claude"), /*#__PURE__*/React.createElement("button", {
-    onClick: genEmail,
-    disabled: false,
-    style: {
-      flex: 1,
-      padding: "9px",
-      fontFamily: F,
-      fontSize: 12,
-      fontWeight: 500,
-      cursor: "pointer",
-      background: C.greenLt,
-      border: "1px solid " + C.green,
-      color: C.green,
-      borderRadius: 8
-    }
-  }, "✉️ Draft email in Claude")), summary && /*#__PURE__*/React.createElement("div", {
-    style: {
-      marginTop: 10,
-      padding: "12px 14px",
-      background: C.muted,
-      borderRadius: 8,
-      border: "1px solid " + C.border
-    }
-  }, sectionLabel("Meeting Summary"), /*#__PURE__*/React.createElement("pre", {
-    style: {
-      margin: 0,
-      fontFamily: F,
-      fontSize: 12,
-      color: C.text2,
-      lineHeight: 1.7,
-      whiteSpace: "pre-wrap"
-    }
-  }, summary)), draft && /*#__PURE__*/React.createElement("div", {
-    style: {
-      marginTop: 10,
-      background: C.card,
-      borderRadius: 8,
-      border: "1px solid " + C.border,
-      overflow: "hidden"
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      padding: "7px 14px",
-      background: C.muted,
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "center"
-    }
-  }, /*#__PURE__*/React.createElement("span", {
-    style: {
-      fontFamily: F,
-      fontSize: 10,
-      fontWeight: 600,
-      color: C.text3,
-      textTransform: "uppercase",
-      letterSpacing: "0.06em"
-    }
-  }, "Draft Email"), /*#__PURE__*/React.createElement("button", {
-    onClick: () => {
-      navigator.clipboard.writeText(draft);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    },
-    style: {
-      fontFamily: F,
-      padding: "3px 10px",
-      borderRadius: 5,
-      fontSize: 11,
-      cursor: "pointer",
-      background: copied ? C.greenLt : "transparent",
-      border: "1px solid " + (copied ? C.green : C.border),
-      color: copied ? C.green : C.text3
-    }
-  }, copied ? "✓ Copied" : "Copy")), /*#__PURE__*/React.createElement("textarea", {
-    value: draft,
-    onChange: e => { setDraft(e.target.value); save("draft", e.target.value); },
-    style: {
-      width: "100%",
-      minHeight: 160,
-      padding: "12px 14px",
-      boxSizing: "border-box",
-      fontFamily: F,
-      fontSize: 12,
-      lineHeight: 1.7,
-      color: C.text2,
-      background: "transparent",
-      border: "none",
-      resize: "vertical",
-      outline: "none"
-    }
-  })))));
-}
-
-// ─── APP ──────────────────────────────────────────────────────────────────────
-const AE_LIST = [{name:"All AEs",id:"ALL"},{name:"Anna Drzeniek",id:"0053q00000B4iHJAAZ"},{name:"Bruno Sousa",id:"0053q00000B4jV2AAJ"},{name:"Daniel Rouco",id:"0053q00000B4SvDAAV"},{name:"Danilo Esposito",id:"0053q00000B4JNvAAN"},{name:"Juan Ceballos Dorado",id:"0053q00000AiYhIAAV"},{name:"Kimberley Bensimhon",id:"0053q00000B4NB0AAN"},{name:"Lars Oostenbach",id:"0053q00000B4iqJAAR"},{name:"Pierre-Antoine Mercier-Handisyde",id:"005Vt00000Kyo1dIAB"},{name:"Richard Hayman",id:"0053q00000AiYhwAAF"},{name:"Yasmine Hakim",id:"0053q00000B4kIYAAZ"}];
-function App() {
-  const [ae, setAe] = useState("ALL");
-  const [search, setSearch] = useState("");
-  const [status, setStatus] = useState("ALL");
-  const [sort, setSort] = useState("hall");
-  const statuses = [...new Set(ACCOUNTS.map(a => a.status).filter(Boolean))].sort();
-  const list = ACCOUNTS.filter(a => (ae === "ALL" || a.oid === ae) && (!search || a.n.toLowerCase().includes(search.toLowerCase())) && (status === "ALL" || a.status === status)).sort((a, b) => (() => {
-      if (sort === "hall") {
-        const hNum = s => { if (!s || s === "" || s === "—") return 9999; const m = s.match(/^([0-9]+[.][0-9]+)/); return m ? parseFloat(m[1]) : 9999; };
-        const hA = hNum(a.booth), hB = hNum(b.booth);
-        if (hA !== hB) return hA - hB;
-        return (b.gmv||0) - (a.gmv||0);
-      }
-      if (sort === "gmv") return (b.gmv||0) - (a.gmv||0);
-      if (sort === "lc") return (SFDC[b.id]?.lc||"") > (SFDC[a.id]?.lc||"") ? 1 : -1;
-      if (sort === "status") return (a.status||"").localeCompare(b.status||"");
-      return a.n.localeCompare(b.n);
-    })());
-  const totalGMV = list.reduce((s, a) => s + (a.gmv || 0), 0);
-  const inbCount = list.filter(a => INBOUND[a.id]).length;
-  const emailCount = list.filter(a => {
-    const e = EMAIL_HISTORY[a.id];
-    return e && (e.ae.length > 0 || e.brand.length > 0);
-  }).length;
-  const sel = {
-    fontFamily: F,
-    padding: "7px 12px",
-    background: C.card,
-    border: "1px solid " + C.border,
-    borderRadius: 8,
-    color: C.text,
-    fontSize: 12,
-    cursor: "pointer",
-    outline: "none"
   };
   return /*#__PURE__*/React.createElement("div", {
     style: {
